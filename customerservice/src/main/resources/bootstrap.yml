@@ -1,0 +1,27 @@
+server:
+  port: 9092
+
+log:
+  level: DEBUG
+
+spring:
+  application:
+    name: CustomerService
+  cloud:
+    config:
+      uri: http://localhost:9090
+  profiles:
+    - DEV
+
+eureka:
+  client:
+    service:
+      url:
+        defaultZone: http://localhost:9091/eureka
+security:
+  basic:
+    enable: false
+
+management:
+  security:
+    enabled: false

@@ -1,0 +1,14 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: ConfigServer
+  cloud:
+    config:
+      server:
+        git:
+          uri: file://${HOME}/workspace/springboot-microservices/config/
+#  profiles:
+#    active: native
+log:
+  level: DEBUG
