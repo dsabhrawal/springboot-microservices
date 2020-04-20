@@ -6,9 +6,12 @@ spring:
   cloud:
     config:
       server:
-        git:
-          uri: file://${HOME}/workspace/springboot-microservices/config/
-#  profiles:
-#    active: native
+        #git:
+          #uri: file://${HOME}/workspace/springboot-microservices/config/
+        native:
+          search-locations:
+            - file://${HOME}/workspace/springboot-microservices/config/
+  profiles:
+    active: native
 log:
   level: DEBUG

@@ -11,13 +11,12 @@ spring:
     config:
       uri: http://localhost:9090
   profiles:
-    - DEV
+    active: DEV
 
 eureka:
   client:
-    service:
-      url:
-        defaultZone: http://localhost:9091/eureka
+    serviceUrl:
+      defaultZone: http://localhost:9091/eureka
 security:
   basic:
     enable: false
